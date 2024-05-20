@@ -25,10 +25,10 @@ const Navbar = () => {
                 <Link to='/pages'>pages</Link>
               </li>
               <li>
-                <Link to='/user'>user account</Link>
+                <Link to='/user'>Login</Link>
               </li>
               <li>
-                <Link to='/vendor'>vendor account</Link>
+                <Link to='/vendor'>Sign Up</Link>
               </li>
               <li>
                 <Link to='/track'>track my order</Link>
