@@ -1,15 +1,16 @@
-import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  // Toogle Menu
-  const [MobileMenu, setMobileMenu] = useState(false)
+  // Toggle Menu
+  const [MobileMenu, setMobileMenu] = useState(false);
+
   return (
     <>
       <header className='header'>
         <div className='container d_flex'>
           <div className='catgrories d_flex'>
-            <span class='fa-solid fa-border-all'></span>
+            <span className='fa-solid fa-border-all'></span>
             <h4>
               Categories <i className='fa fa-chevron-down'></i>
             </h4>
@@ -17,15 +18,15 @@ const Navbar = () => {
 
           <div className='navlink'>
             <ul className={MobileMenu ? "nav-links-MobileMenu" : "link f_flex capitalize"} onClick={() => setMobileMenu(false)}>
-              {/*<ul className='link f_flex uppercase {MobileMenu ? "nav-links-MobileMenu" : "nav-links"} onClick={() => setMobileMenu(false)}'>*/}
               <li>
                 <Link to='/'>home</Link>
               </li>
               <li>
                 <Link to='/pages'>pages</Link>
               </li>
+              {/* Navigate to LoginForm */}
               <li>
-                <Link to='/user'>Login</Link>
+                <Link to='/login'>Login</Link>
               </li>
               <li>
                 <Link to='/vendor'>Sign Up</Link>
@@ -34,7 +35,7 @@ const Navbar = () => {
                 <Link to='/track'>track my order</Link>
               </li>
               <li>
-                <Link to='/contact'>contact</Link>
+                <Link to='/Contact'>contact</Link>
               </li>
             </ul>
 
@@ -45,7 +46,7 @@ const Navbar = () => {
         </div>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

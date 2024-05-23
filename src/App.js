@@ -7,7 +7,10 @@ import Data from "./components/Data"
 import Cart from "./common/Cart/Cart"
 import Footer from "./common/footer/Footer"
 import Sdata from "./components/shops/Sdata"
-import Login from "./Auth/Login";
+import Contact from "./components/MainPage/Contact"
+import LoginForm from './Auth/LoginForm';
+
+// import Login from "./Auth/Login";
 
 function App() {
   /*
@@ -68,6 +71,16 @@ function App() {
     }
   }
 
+  const handleLogin = (userData) => {
+    // Handle login logic here
+    console.log('Logging in with:', userData);
+  };
+
+  const handleRegister = () => {
+    // Handle navigation to register page or show register form
+    console.log('Navigate to register page or show register form');
+  };
+
   return (
     <>
       <Router>
@@ -79,7 +92,14 @@ function App() {
           <Route path='/cart' exact>
             <Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} />
           </Route>
-          <Route path="/Login" element={<Login />} />
+          <Route path="/login" exact>
+
+            <LoginForm handleLogin={handleLogin} handleRegister={handleRegister} />
+
+          </Route>
+          <Route path="/contact" exact>
+            <Contact />
+          </Route>
         </Switch>
         <Footer />
       </Router>
